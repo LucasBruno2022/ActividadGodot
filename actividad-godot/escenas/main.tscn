@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://c1tyqdyaauoga"]
+
+[ext_resource type="PackedScene" uid="uid://bcyfqfvhly4be" path="res://escenas/character_body_2d.tscn" id="1_d7u15"]
+[ext_resource type="PackedScene" uid="uid://qy8txwy27d3y" path="res://escenas/static_body_2d.tscn" id="2_0kxa1"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0kxa1"]
+
+[node name="Main" type="Node2D" unique_id=630310680]
+
+[node name="Jugador" parent="." unique_id=2126727347 instance=ExtResource("1_d7u15")]
+position = Vector2(576, 210)
+
+[node name="Camera2D" type="Camera2D" parent="Jugador" unique_id=1872029117]
+
+[node name="Suelo" parent="." unique_id=302022853 instance=ExtResource("2_0kxa1")]
+modulate = Color(0.3521841, 0.72175556, 0.40897515, 1)
+position = Vector2(571, 637)
+scale = Vector2(-33.5707, 0.45695263)
+physics_material_override = SubResource("PhysicsMaterial_0kxa1")
+
+[node name="StaticBody2D2" parent="." unique_id=1470267591 instance=ExtResource("2_0kxa1")]
+position = Vector2(832, 408.00003)
+scale = Vector2(1.3145188, 0.50663036)
+collision_layer = 2
+
+[node name="StaticBody2D3" parent="." unique_id=337720752 instance=ExtResource("2_0kxa1")]
+position = Vector2(194, 270)
+scale = Vector2(1.4675523, 0.6316962)
+
+[node name="StaticBody2D4" parent="." unique_id=1715313414 instance=ExtResource("2_0kxa1")]
+position = Vector2(-1644, 534)
+
+[node name="StaticBody2D5" parent="." unique_id=538840699 instance=ExtResource("2_0kxa1")]
+position = Vector2(2782, 558)
